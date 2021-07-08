@@ -1,14 +1,13 @@
-import React from 'react'
-import { Pie, defaults } from 'react-chartjs-2'
-
-defaults.global.tooltips.enabled = false
-defaults.global.legend.position = 'bottom'
-
-const BarChart = () => {
+import React from 'react';
+import "./barchart.css";
+const Barchart = ({ children }) => {
   return (
-    <div>
-      hi
-    </div>
+    <h2 className="barchart">
+      {
+        children
+      }
+    </h2>
   )
 }
 
+export default Barchart;

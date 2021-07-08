@@ -2,6 +2,7 @@
   "name": "my-storybook-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://Iandogo.github.io/my-storybook-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -20,7 +21,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=e02125e9e178"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +61,7 @@
     "@storybook/node-logger": "^6.3.3",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.3",
-    "chromatic": "^5.9.2"
+    "chromatic": "^5.9.2",
+    "gh-pages": "^3.2.3"
   }
 }
